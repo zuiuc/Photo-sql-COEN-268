@@ -80,7 +80,7 @@ public class AddPhotoActivity extends AppCompatActivity {
                 Environment.DIRECTORY_PICTURES);
         pictureImagePath = storageDir.getAbsolutePath() + "/" + imageFileName;
 
-        File im = new File(pictureImagePath); 
+        File im = new File(pictureImagePath);
         imageUri = Uri.fromFile(im);
 
 
