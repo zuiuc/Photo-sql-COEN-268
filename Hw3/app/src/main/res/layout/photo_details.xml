@@ -3,4 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="174dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/sbm"
+        android:layout_marginTop="43sp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView"
+        android:layout_marginTop="43sp"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
