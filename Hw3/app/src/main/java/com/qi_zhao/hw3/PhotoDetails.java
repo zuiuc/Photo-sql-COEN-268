@@ -1,9 +1,6 @@
 package com.qi_zhao.hw3;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -31,9 +28,10 @@ public class PhotoDetails extends AppCompatActivity {
 
         // set imageView to show image
         String filePath = bundle.getString("currentPath");
-        Bitmap yourSelectedImage = BitmapFactory.decodeFile(filePath);
+        /*Bitmap yourSelectedImage = BitmapFactory.decodeFile(filePath);
         Drawable d = new BitmapDrawable(yourSelectedImage);
-        imageView.setImageDrawable(d);
+        imageView.setImageDrawable(d);*/
+        imageView.setImageURI(Uri.parse(filePath));
     }
 
 }

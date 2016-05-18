@@ -18,7 +18,9 @@
         android:id="@+id/editText"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:hint="Enter your caption here" />
+        android:hint="Enter your caption here"
+        android:autoText="false"
+        android:text="Enter Your Caption" />
 
     <Button
         android:layout_width="match_parent"

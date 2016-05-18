@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         toastShow("MacRecID is " + maxRecId);
     }
 
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -62,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        dbHelper = new PhotoDBHelper(this);
+        cursor = dbHelper.fetchAll();
+        ca = new PhotoAdapter(this, cursor, 0);
+        list = (ListView) findViewById(R.id.listView);
+        list.setAdapter(ca);
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
